@@ -1,54 +1,56 @@
 export default class BasePage {
-  constructor(page) {
-    this.page = page;
-  }
 
-  async navigate(url = "/") {
-    await this.page.goto(url);
-  }
+    constructor(page) {
+        this.page = page;
+    }
 
-  async getTitle() {
-    return await this.page.title();
-  }
+    async navigate(url = "/") {
+        await this.page.goto(url);
+    }
 
-  async getCurrentURL() {
-    return this.page.url();
-  }
+    async getTitle() {
+        return await this.page.title();
+    }
 
-  async reloadPage() {
-    await this.page.reload();
-  }
+    async getCurrentURL() {
+        return this.page.url();
+    }
 
-  async goBack() {
-    await this.page.goBack();
-  }
+    async reloadPage() {
+        await this.page.reload();
+    }
 
-  async goForward() {
-    await this.page.goForward();
-  }
+    async goBack() {
+        await this.page.goBack();
+    }
 
-  // Click on element
-async click(locator) {
-    await this.page.locator(locator).click();
-}
+    async goForward() {
+        await this.page.goForward();
+    }
 
-// Enter text
-async fill(locator, value) {
-    await this.page.locator(locator).fill(value);
-}
+    // Click
+    async click(locator) {
+        await locator.click();
+    }
 
-// Get text
-async getText(locator) {
-    return await this.page.locator(locator).textContent();
-}
+    // Fill
+    async fill(locator, value) {
+        await locator.fill(value);
+    }
 
-// Check visibility
-async isVisible(locator) {
-    return await this.page.locator(locator).isVisible();
-}
+    // Get Text
+    async getText(locator) {
+        return await locator.textContent();
+    }
 
-// Wait for element
-async waitForElement(locator) {
-    await this.page.locator(locator).waitFor();
-}
+    // Is Visible
+    async isVisible(locator) {
+        return await locator.isVisible();
+    }
+
+    // Wait
+    async waitForElement(locator) {
+        await locator.waitFor();
+    }
+
 }

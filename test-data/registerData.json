@@ -1,0 +1,23 @@
+{
+    "user": {
+        "name": "Vinay Shekhar",
+        "password": "Test@123",
+
+        "firstName": "Vinay",
+        "lastName": "Shekhar",
+
+        "company": "OpenAI",
+
+        "address": "Vaishali Nagar",
+
+        "country": "India",
+
+        "state": "Rajasthan",
+
+        "city": "Jaipur",
+
+        "zipcode": "302021",
+
+        "mobileNumber": "2212124125"
+    }
+}
