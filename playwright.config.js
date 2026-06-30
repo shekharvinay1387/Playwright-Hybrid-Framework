@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import { config } from "./config/config.js";
 
 export default defineConfig({
 
@@ -25,7 +26,7 @@ export default defineConfig({
   use: {
 
     // Application URL
-    baseURL: 'https://automationexercise.com',
+    baseURL: config.baseURL,
 
     // Open browser in headed mode
     headless: false,
